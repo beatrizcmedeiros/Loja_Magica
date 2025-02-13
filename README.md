@@ -50,4 +50,26 @@ Para a construção da tabela de pedidos foi usado o [DataTables](https://datata
 
 ## Como rodar o projeto
 1. Ligar o servidor apache e mySQL no painel do XAMPP
+
+## Screenshots
+
+Tela principal de listagem de pedidos
+![image](https://github.com/user-attachments/assets/0b70d549-fe0d-40e0-99b7-f09f3458239f)
+![image](https://github.com/user-attachments/assets/39b9a295-c116-411f-8ef5-5dafe843d50e)
+
+
+Edição de pedido
+![image](https://github.com/user-attachments/assets/f2270dc2-385a-4ae9-9119-937842638542)
+![image](https://github.com/user-attachments/assets/c953177d-626a-4f42-8db6-2fc51d9e5e5d)
+
+Integração de terceiros 
+![image](https://github.com/user-attachments/assets/8ce54454-0725-4585-9bb1-26101462bef4)
+
+Envio de emails
+![image](https://github.com/user-attachments/assets/dc602084-7273-45e0-87c6-2cb94c09019c)
+![image](https://github.com/user-attachments/assets/0342b8d6-b97b-4c81-b643-011d6482eee8)
+
+Email enviado no MailSaur
+![image](https://github.com/user-attachments/assets/b81c84de-e3d4-43b1-9ebc-ab6749ac10dc)
+
    
