@@ -1,0 +1,52 @@
+# Ignorar diretórios e arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar dependências do Composer
+/vendor/
+composer.lock
+
+# Ignorar configurações do ambiente
+.env
+.env.local
+.env.*.local
+
+# Ignorar caches e logs
+/node_modules/
+npm-debug.log
+yarn-error.log
+debug.log
+/storage/logs/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+
+# Ignorar uploads e arquivos temporários
+/public/uploads/
+*.log
+*.cache
+*.sql
+*.sqlite
+*.bak
+*.swp
+
+# Ignorar IDEs e editores
+/.vscode/
+/.idea/
+/nbproject/
+/*.sublime-project
+/*.sublime-workspace
+
+# Ignorar arquivos gerados pelo sistema
+/public/storage
+/public/hot
+/public/mix-manifest.json
+/public/assets/build/
+phpunit.xml
+phpunit.xml.dist
+/.phpunit.result.cache
+
+# Ignorar chaves SSH e credenciais
+id_rsa*
+*.pem
+*.key
