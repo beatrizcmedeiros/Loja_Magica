@@ -41,8 +41,8 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
             <button id="select-all">Selecionar Todos</button>
             <ul id="email-list">
             </ul>
-            <button id="confirm-selection">Confirmar</button>
             <button id="cancel-selection">Cancelar</button>
+            <button id="confirm-selection">Confirmar</button>
         </div>
     </div>
 
