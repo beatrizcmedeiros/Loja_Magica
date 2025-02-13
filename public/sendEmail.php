@@ -15,6 +15,9 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
     <script src="../public/assets/js/script.js"></script>
 </head>
 <body class="body-edit-order">
+    <nav class="navbar">
+        <a href="index.php">Home</a>
+    </nav>
     <h2 class="edit-order-title">Emails</h2>
     <form action="" class="form-edit-order" enctype="multipart/form-data">
         <div class="container-input">
@@ -25,10 +28,7 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
             <label for="email_body">Corpo do email:</label>
             <textarea id="email_body" placeholder="Insira o corpo do email" rows="4"></textarea>
         </div>
-        <div class="container-input">
-            <label for="attachments">Anexos:</label>
-            <input id="attachments" type="file" multiple>
-        </div>
+
         <div class="container-buttons">
             <button class="send-button" type="submit">Enviar</button>
         </div>
@@ -98,10 +98,6 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
             form_data.append('email_subject', $('#email_subject').val());
             form_data.append('email_body', $('#email_body').val());
 
-            const files = $('#attachments')[0].files;
-            for (let i = 0; i < files.length; i++) {
-                form_data.append('attachments[]', files[i]);
-            }
 
             form_data.append('emails', JSON.stringify(selected_emails));
 
@@ -109,16 +105,12 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
                 method: 'POST',
                 body: form_data
             })
-            .then(response => response.text())
-            .then(data => {
-                const response = JSON.parse(data);
-
-                if (response.success) {
+            .then(response => {
+                response.text()
+                if(response.status === 200)
                     alert('Email enviado com sucesso!');
-                    $('#email-popup').hide();
-                } else {
+                else 
                     alert('Erro ao enviar o email.');
-                }
             })
             .catch(error => {
                 alert('Erro ao enviar o email.');

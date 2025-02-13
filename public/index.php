@@ -12,7 +12,13 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
     <title>Loja Mágica de Tecnologia</title>
 </head>
 <body>
-
+    <nav class="navbar">
+        <div class="container-links">
+            <a href="SendEmail.php">Enviar emails</a>
+            <span>|</span>
+            <a href="importXML.php">Importar XML (Lojas Parceiras)</a>
+        </div>
+    </nav>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
@@ -29,7 +35,7 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
             Selecionar arquivo
         </label>
         <input type="file" id="file_input" name="file" class="input-file"/>
-        <strong id="file_name"></span>
+        <strong id="file_name"></strong>
         <button type="button" onclick="importFile()" class="import-button">Importar</button>
     </form>
 
@@ -117,6 +123,11 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
 
             if (data && data.id) 
                 window.location.href = `editOrder.php?id=${data.id}`;
+        });
+
+        document.getElementById('file_input').addEventListener('change', function(event) {
+            const fileName = event.target.files.length > 0 ? event.target.files[0].name : "Nenhum arquivo selecionado";
+            document.getElementById('file_name').textContent = fileName;
         });
     </script>
 

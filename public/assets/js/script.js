@@ -62,14 +62,3 @@ function importXML() {
 
 
 
-function onSelectFile(){
-    // console.log('PASSOU')
-    // const fileInput = document.getElementById('fileInput');
-    // console.log('PASSOU 2', fileInput)
-    // if (fileInput.files.length > 0) {
-    //     const fileName = document.getElementById('file-name')
-    //     fileName.textContent = fileInput.files[0].name;
-    // } 
-}
-
-

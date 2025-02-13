@@ -8,7 +8,9 @@
 </head>
 <body class="body-import-xml">
     <script src="../public/assets/js/script.js"></script>
-
+    <nav class="navbar">
+        <a href="index.php">Home</a>
+    </nav>
     <h2 id="h2-import-xml">Simulação de Interface de Lojas Parceiras</h2>
 
     <br><br>
@@ -21,6 +23,11 @@
         <strong id="xml_name"></strong> 
         <button type="button" onclick="importXML()" class="import-button">Importar</button>
     </form>
-
+    <script>
+        document.getElementById('xml_input').addEventListener('change', function(event) {
+            const fileName = event.target.files.length > 0 ? event.target.files[0].name : "Nenhum arquivo selecionado";
+            document.getElementById('xml_name').textContent = fileName;
+        });
+    </script>
 </body>
 </html>

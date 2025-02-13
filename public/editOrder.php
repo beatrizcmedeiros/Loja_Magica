@@ -22,7 +22,7 @@ if ($order_id !== null)
 </head>
 <body class="body-edit-order">
     <nav class="navbar">
-        <a href="index.php">Voltar</a>
+        <a href="index.php">Home</a>
     </nav>
     <h2 class="edit-order-title">Edição do pedido</h2>
     <form action="" class="form-edit-order" enctype="multipart/form-data">

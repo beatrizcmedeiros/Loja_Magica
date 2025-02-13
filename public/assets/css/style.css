@@ -26,12 +26,14 @@ input[type="file"], input[type="xml"]{
     background: #89A8B2;
     color: #fff;
     margin-left: 16px;
+    cursor: pointer;
 }
 
 body {
     padding: 32px;
+    padding-top: 82px;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color:rgb(206, 205, 201);
@@ -142,6 +144,7 @@ td:last-child, td:nth-last-child(2) {
 }
 
 .form-edit-order {
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
     display: flex;
@@ -164,7 +167,7 @@ td:last-child, td:nth-last-child(2) {
             font-sizing: 16px;
         }
 
-        input {
+        input, textarea {
             padding: 4px 8px;
             font-sizing: 14px;
         }
@@ -186,7 +189,7 @@ td:last-child, td:nth-last-child(2) {
             cursor: pointer;
         }
 
-        .save-button {
+        .save-button, .send-button {
             background-color: #007bff;
             color: white;
         }
@@ -206,6 +209,32 @@ td:last-child, td:nth-last-child(2) {
     }
 }
 
+#email-popup {
+    width: 600px;
+    h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    button {
+        border: none;
+            padding: 8px 12px;
+            font-sizing: 16px;
+            border-radius: 8px;
+            width: 130px;
+            cursor: pointer;
+    }
+
+    #confirm-selection {
+        background-color: #007bff;
+        color: white;
+    }
+
+    #cancel-selection {
+        background-color: #dc3545;
+        color: white;
+    }
+}
+
 
 #info_clients tbody tr {
     cursor: pointer;
@@ -219,10 +248,16 @@ td:last-child, td:nth-last-child(2) {
     width: 100vw;
     height: 50px;
     background: #f1f3f5;
-    padding: 16px 32px;
-    position: absolute;
+    padding: 16px 32px!important;
+    position: absolute!important;
     top: 0;
     left: 0;
+
+    .container-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
 
     a {
         font-size: 18px;
@@ -231,9 +266,6 @@ td:last-child, td:nth-last-child(2) {
     }
 }
 
-.body-import-xml {
-    background-color: #f1f3f5;
-}
 
 #upload_xml_form, #h2-import-xml{
     text-align: center;
@@ -256,7 +288,7 @@ td:last-child, td:nth-last-child(2) {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 500px;
     text-align: center;
 }
 
@@ -267,4 +299,8 @@ td:last-child, td:nth-last-child(2) {
     max-height: 150px;
     overflow-y: auto;
     text-align: left;
+
+    li {
+        margin-bottom: 4px;
+    }
 }
