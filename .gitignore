@@ -25,7 +25,6 @@ storage/framework/views/
 /public/uploads/
 *.log
 *.cache
-*.sql
 *.sqlite
 *.bak
 *.swp
