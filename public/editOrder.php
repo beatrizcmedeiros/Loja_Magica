@@ -67,7 +67,7 @@ if ($order_id !== null)
                 $('#client_name').val(order_data.client_name);
                 $('#client_email').val(order_data.client_email);
                 $('#history').val(order_data.description);
-                $('#last_order_date').val(order_data.last_order_date);
+                $('#last_order_date').val(formatDateToDDMMYYYY(order_data.last_order_date));
                 $('#last_order_value').val(order_data.last_order_value);
             }
 
@@ -84,7 +84,7 @@ if ($order_id !== null)
                 form_data.append('client_name', $('#client_name').val());
                 form_data.append('client_email', $('#client_email').val());
                 form_data.append('description', $('#history').val());
-                form_data.append('last_order_date', $('#last_order_date').val());
+                appendFormattedDate(form_data, 'last_order_date', $('#last_order_date').val());
                 form_data.append('last_order_value', $('#last_order_value').val());
 
                 fetch('api/UpdateOrder.php', {
@@ -95,7 +95,7 @@ if ($order_id !== null)
                 .then(data => {
                     const response = JSON.parse(data)
 
-                    if(response.success)
+                    if (response.success) 
                         alert('Pedido atualizado com sucesso!');
                     else
                         alert('Erro ao atualizar o pedido.');
