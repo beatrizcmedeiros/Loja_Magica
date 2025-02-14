@@ -18,7 +18,7 @@ function sendEmails($data) {
         $mail->Password = 'h2cmL8UJoC0yoUILicOEFVee9IBvSfbN'; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
-        $mail->SMTPDebug = 2; // Ativa a exibição de mensagens de depuração do SMTP
+        $mail->SMTPDebug = 2; 
 
         $mail->setFrom('qf3ctqlu@mailosaur.net', 'Loja Magica');
         $mail->Subject = $data["email_subject"];

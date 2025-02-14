@@ -77,6 +77,7 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
             });
 
             tabela = $('#info_clients').DataTable({
+                "ajax": "../app/controllers/GetClientData.php",
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/Portuguese-Brasil.json",
                     "sInfo": "Mostrando página _PAGE_ de _PAGES_",
@@ -98,7 +99,7 @@ require_once __DIR__ . '/api/ListClientOrderHistory.php';
                 "scrollX": true,
                 "processing": true,
                 "serverSide": false,
-                "data": client_data,  
+                // "data": client_data,  
                 "columns": [
                     { "data": "client_id" },
                     { "data": "client_name" },

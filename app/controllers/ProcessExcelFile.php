@@ -24,7 +24,7 @@ if (isset($_FILES['file'])) {
             continue;
 
         if(!is_numeric($content[5]))
-            $content[5] = '';
+            $content[5] = NULL;
         
         $new_client_order_history = new ClientOrderHistory($content[0], $content[1], $content[2], $content[3], $content[4], $content[5]);
 
